@@ -23,11 +23,13 @@
   <Description>A Discord bot that sends updates about your plex media to a Discord channel using webhooks. Please see the support thread for more details on how to set it up and configure Discord and Plex.</Description>
   <Changes>
     [center][font size=5]PlexAnnouncer Change Log[/font][/center]
-    [font size=4]2021.03.11[/font]
+    
+    [font size=4]0.2.X[/font] (2021-03-14)
+    - Switch from config file to env vars
+    
+    [font size=4]0.1.X[/font] (2021-03-11)
     - Initial Release
 
-    [font size=4]2021.03.14[/font]
-    - Switch from config file to env vars
   </Changes>
   <Networking>
     <Mode>bridge</Mode>
