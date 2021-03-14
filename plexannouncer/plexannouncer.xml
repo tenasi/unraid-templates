@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>PlexAnnouncer</Name>
-  <Repository>tenasi/plexannouncer</Repository>
+  <Repository>tenasi/plexannouncer:latest</Repository>
   <Registry>https://hub.docker.com/r/tenasi/plexannouncer</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -12,15 +12,23 @@
   <Overview>A Discord bot that sends updates about your plex media to a Discord channel using webhooks. Please see the support thread for more details on how to set it up and configure Discord and Plex.</Overview>
   <Category>Tools: Other: Status:Stable</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/tenasi/unraid-templates/main/plexannouncer/plexannouncer.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/tenasi/unraid-templates/main/plexannouncer/icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1615506614</DateInstalled>
-  <DonateText>If you like our work, please consider supporting it</DonateText>
-  <DonateLink>https://paypal.me/tenasi</DonateLink>
+  <DateInstalled>1615720195</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
   <Description>A Discord bot that sends updates about your plex media to a Discord channel using webhooks. Please see the support thread for more details on how to set it up and configure Discord and Plex.</Description>
+  <Changes>
+    [center][font size=5]PlexAnnouncer Change Log[/font][/center]
+    [font size=4]2021.03.11[/font]
+    - Initial Release
+
+    [font size=4]2021.03.14[/font]
+    - Switch from config file to env vars
+  </Changes>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -31,15 +39,27 @@
       </Port>
     </Publish>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment/>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>PLEX_SERVER_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PLEX_WEBHOOK_TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DISCORD_WEBHOOK_URL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
   <Labels/>
   <Config Name="Webhook Port" Target="32500" Default="32500" Mode="tcp" Description="The port for incoming webhooks from plex" Type="Port" Display="always" Required="true" Mask="false">32500</Config>
-  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/plex_announcer/" Mode="rw" Description="The path to your configuration folder" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Plex Server URL" Target="PLEX_SERVER_URL" Default="" Mode="" Description="The url pointing to your Plex server" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Plex Webhook Token" Target="PLEX_WEBHOOK_TOKEN" Default="" Mode="" Description="Some randomly generated token" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Discord Webhook URL" Target="DISCORD_WEBHOOK_URL" Default="" Mode="" Description="The url of your Discord webhook" Type="Variable" Display="always" Required="true" Mask="false"></Config>
 </Container>
