@@ -24,6 +24,9 @@
   <Changes>
     [center][font size=5]PlexAnnouncer Change Log[/font][/center]
    
+    [font size=4]0.5.2[/font] (2022-04-10)
+    - Fix invalid plex server url error
+    
     [font size=4]0.5.0[/font] (2022-04-09)
     - Add option for multiple discord servers
     - Fix broken link for tv shows
