@@ -10,7 +10,7 @@
   <Support>https://forums.unraid.net/topic/103956-support-tenasi-plexannouncer/</Support>
   <Project>https://github.com/tenasi/plexannouncer</Project>
   <Overview>A Discord bot that sends updates about your plex media to a Discord channel using webhooks. Please see the support thread for more details on how to set it up and configure Discord and Plex.</Overview>
-  <Category>Tools: Other: Status:Stable</Category>
+  <Category>HomeAutomation: Tools: Other: Status:Stable</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/tenasi/unraid-templates/main/plexannouncer/plexannouncer.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/tenasi/unraid-templates/main/plexannouncer/icon.png</Icon>
