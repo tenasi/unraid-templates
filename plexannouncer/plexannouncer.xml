@@ -22,27 +22,27 @@
   <DonateLink/>
   <Description>A Discord bot that sends updates about your plex media to a Discord channel using webhooks. Please see the support thread for more details on how to set it up and configure Discord and Plex.</Description>
   <Changes>
-    ## PlexAnnouncer Change Log
-   
-    ### 0.5.3 (2022-04-10)
-    - Fix invalid plex server url error
-    - Fix episodes not announcing correctly
-    
-    ### 0.5.0 (2022-04-09)
-    - Add option for multiple discord servers
-    - Fix broken link for tv shows
-    
-    ### 0.3.5 (2021-03-14)
-    - Add option to whitelist libraries
-    
-    ### 0.3.0 (2021-03-14)
-    - Add support for new tv shows
-    
-    ### 0.2.X (2021-03-14)
-    - Switch from config file to env vars
-    
-    ### 0.1.X (2021-03-11)
-    - Initial Release
+## PlexAnnouncer Change Log
+
+### 0.5.3 (2022-04-10)
+- Fix invalid plex server url error
+- Fix episodes not announcing correctly
+
+### 0.5.0 (2022-04-09)
+- Add option for multiple discord servers
+- Fix broken link for tv shows
+
+### 0.3.5 (2021-03-14)
+- Add option to whitelist libraries
+
+### 0.3.0 (2021-03-14)
+- Add support for new tv shows
+
+### 0.2.X (2021-03-14)
+- Switch from config file to env vars
+
+### 0.1.X (2021-03-11)
+- Initial Release
   </Changes>
   <Networking>
     <Mode>bridge</Mode>
