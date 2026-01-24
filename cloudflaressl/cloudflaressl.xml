@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>CloudflareSSL</Name>
+  <Repository>tenasi/cloudflaressl:latest</Repository>
+  <Registry>https://hub.docker.com/r/tenasi/cloudflaressl</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/196746-support-tenasi-cloudflaressl/</Support>
+  <Project>https://github.com/tenasi/cloudflaressl</Project>
+  <ReadMe/>
+  <Overview>A small Docker container that generates Let's Encrypt certificates for Unraid using the Cloudflare API allowing to avoid "this page is not secure" warnings when connecting to Unraid locally.</Overview>
+  <Category>Security: Tools: Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/tenasi/unraid-templates/main/cloudflaressl/cloudflaressl.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tenasi/unraid-templates/refs/heads/main/cloudflaressl/icon.png</Icon>
+  <ExtraParams>-e HOST_HOSTNAME=`hostname`</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1769268447</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>A small Docker container that generates Let's Encrypt certificates for Unraid using the Cloudflare API allowing to avoid "this page is not secure" warnings when connecting to Unraid locally.</Description>
+  <Changes>
+## CloudflareSSL Change Log
+
+### 0.1.0 (2026-01-24)
+- Initial Release
+  </Changes>
+  <Requires/>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>CLOUDFLARE_API_TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>CERTBOT_EMAIL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>CERTBOT_DOMAINS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>CERTBOT_KEY_TYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>RENEWAL_INTERVAL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="Cloudflare API Token" Target="CLOUDFLARE_API_TOKEN" Default="" Mode="" Description="Token to authenticate against the Cloudflare API endpoint." Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Email" Target="CERTBOT_EMAIL" Default="" Mode="" Description="Email address for Let's Encrypt notifications." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Domains" Target="CERTBOT_DOMAINS" Default="" Mode="" Description="Comma-separated list of domains for which to obtain the certificate." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Key Type" Target="CERTBOT_KEY_TYPE" Default="ecdsa" Mode="" Description="Type of private key to generate (e.g. ecdsa, rsa)." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Renewal Interval" Target="RENEWAL_INTERVAL" Default="43200" Mode="" Description="Interval between certificate renewal checks. Set to 0 to disable renewals and only run once." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Lets Encrypt Config Path" Target="/etc/letsencrypt" Default="/mnt/user/appdata/cloudflaressl" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cloudflaressl/</Config>
+  <Config Name="Unraid SSL Config" Target="/etc/unraidssl" Default="/boot/config/ssl/certs" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/boot/config/ssl/certs</Config>
+  <TailscaleStateDir/>
+</Container>
