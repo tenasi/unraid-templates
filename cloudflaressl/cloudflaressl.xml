@@ -15,7 +15,7 @@
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/tenasi/unraid-templates/main/cloudflaressl/cloudflaressl.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/tenasi/unraid-templates/refs/heads/main/cloudflaressl/icon.png</Icon>
-  <ExtraParams>-e HOST_HOSTNAME=`hostname`</ExtraParams>
+  <ExtraParams></ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1769268447</DateInstalled>
@@ -62,7 +62,7 @@
   <Config Name="Domains" Target="CERTBOT_DOMAINS" Default="" Mode="" Description="Comma-separated list of domains for which to obtain the certificate." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Key Type" Target="CERTBOT_KEY_TYPE" Default="ecdsa" Mode="" Description="Type of private key to generate (e.g. ecdsa, rsa)." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Renewal Interval" Target="RENEWAL_INTERVAL" Default="43200" Mode="" Description="Interval between certificate renewal checks. Set to 0 to disable renewals and only run once." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Unraid SSL Bundle" Target="/etc/ssl/unraid_bundle.pem" Default="/boot/config/ssl/certs/HOSTNAME_unraid_bundle.pem" Mode="rw" Description="Path to the Unraid SSL bundle file. This should be stored in /boot/config/ssl/certs/HOSTNAME_unraid_bundle.pem" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Lets Encrypt Config Path" Target="/etc/letsencrypt" Default="/mnt/user/appdata/cloudflaressl" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cloudflaressl/</Config>
-  <Config Name="Unraid SSL Config" Target="/etc/unraidssl" Default="/boot/config/ssl/certs" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/boot/config/ssl/certs</Config>
   <TailscaleStateDir/>
 </Container>
