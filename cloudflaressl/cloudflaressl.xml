@@ -25,6 +25,10 @@
   <Changes>
 ## CloudflareSSL Change Log
 
+### 0.2.0 (2026-01-25)
+- Change Unraid bundle path to /etc/ssl/unraid_bundle.pem
+  Note: It is now required to set the path to the hosts unraid bundle during the initial setup.
+    
 ### 0.1.0 (2026-01-24)
 - Initial Release
   </Changes>
